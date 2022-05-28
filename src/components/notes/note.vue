@@ -1,5 +1,6 @@
 <script setup>
 import {useStoreNotes} from '../../stores/storeNotes'
+import {RouterLink} from 'vue-router'
 
 const storeNotes = useStoreNotes()
 const props = defineProps(['note'])
@@ -13,7 +14,7 @@ const props = defineProps(['note'])
       {{ note.content }}
       <div class="border-t mt-4">
         <div class="flex justify-center">
-          <button class="font-bold w-full mt-1 p-3">Edit</button>
+          <RouterLink :to="`/edit-note/${note.id}`" class="font-bold mx-auto w-full mt-1 p-3">Edit</RouterLink>
           <button class="font-bold w-full mt-1 p-3" @click.prevent="storeNotes.deleteNote(note.id)">Delete</button>
         </div>
       </div>

@@ -25,7 +25,7 @@ const router = createRouter({
             ],
         },
         {
-            path: '/editNote/:id',
+            path: '/edit-note/:id',
             name: 'edit-note',
             component: EditView,
         },

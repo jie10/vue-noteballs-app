@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1>This is edit</h1>
+  <h1>Edit note with an id of : {{ $route.params.id }}</h1>
 </template>
 
 <style>
