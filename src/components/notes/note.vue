@@ -14,7 +14,7 @@ const props = defineProps(['note'])
       {{ note.content }}
       <div class="border-t mt-4">
         <div class="flex justify-center">
-          <RouterLink :to="`/edit-note/${note.id}`" class="font-bold mx-auto w-full mt-1 p-3">Edit</RouterLink>
+          <RouterLink :to="`/edit-note/${note.id}`" class="font-bold text-center w-full mt-1 p-3">Edit</RouterLink>
           <button class="font-bold w-full mt-1 p-3" @click.prevent="storeNotes.deleteNote(note.id)">Delete</button>
         </div>
       </div>
